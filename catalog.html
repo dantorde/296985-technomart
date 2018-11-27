@@ -77,31 +77,34 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Здесь будет фильтр -->
 
-        <form action="" method="post">
-          <h3>Производители</h3>
+        <form action="" method="get">
+          <fieldset>
+            <legend>Производители:</legend>
 
-          <input type="checkbox" checked name="brands" id="bosh">
-          <label for="bosh">BOSCH</label>
+            <input type="checkbox" checked name="brands" id="bosh">
+            <label for="bosh">BOSCH</label>
 
-          <input type="checkbox" name="brands" id="interscol">
-          <label for="interscol">ИНТЕРСКОЛ</label>
+            <input type="checkbox" name="brands" id="interscol">
+            <label for="interscol">ИНТЕРСКОЛ</label>
 
-          <input type="checkbox" checked name="brands" id="makita">
-          <label for="makita">MAKIta</label>
+            <input type="checkbox" checked name="brands" id="makita">
+            <label for="makita">MAKIta</label>
 
-          <input type="checkbox" name="brands" id="dewalt">
-          <label for="dewalt">Dewalt</label>
+            <input type="checkbox" name="brands" id="dewalt">
+            <label for="dewalt">Dewalt</label>
 
-          <input type="checkbox" name="brands" id="hitachi">
-          <label for="hitachi">Hitachi</label>
+            <input type="checkbox" name="brands" id="hitachi">
+            <label for="hitachi">Hitachi</label>
+          </fieldset>
 
-          <h3>Питание</h3>
-          <input type="radio" name="supply" id="battery" value="Аккумуляторные">
-          <label for="battery">Аккумуляторные</label>
+          <fieldset>
+            <legend>Питание</legend>
+            <input type="radio" name="supply" id="battery" value="Аккумуляторные">
+            <label for="battery">Аккумуляторные</label>
 
-          <input type="radio" name="supply" id="network" value="Сетевые">
-          <label for="network">Сетевые</label>
-
+            <input type="radio" name="supply" id="network" value="Сетевые">
+            <label for="network">Сетевые</label>
+          </fieldset>
 
           <input type="submit" value="Показать">
 
