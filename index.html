@@ -58,7 +58,7 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="h-index">Интернет-магазин строительных материалов и инструментов для ремонта «Техномарт»</h1>
+      <h1  class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта «Техномарт»</h1>
       <!--здесь будет основное содержание страницы-->
       <section class="index-about-company">
         <h2>
@@ -141,5 +141,23 @@
         </p>
       </div>
     </footer>
+
+    <section class="modal modal-write-us">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <span class="modal-close">x</span>
+      <form action="" method="post">
+        <div class="modal-contacts">
+          <label for="name">Ваше имя:</label><br>
+          <input type="text" name="name" id="name" value="Имя Фамилия">
+          <label for="email">Ваш e-mail:</label><br>
+          <input type="email" id="email" value="email@example.com">
+        </div>
+        <label for="textarea-filed">Текст письма:</label><br>
+        <textarea id="textarea-filed" value="В свободной форме"></textarea>
+
+        <input type="submit" value="Отправить">
+      </form>
+    </section>
+
   </body>
 </html>
