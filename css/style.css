@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: "PT-Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 400;
+  background-color: #ffffff;
+}
+
+.main-header {
+  background-color: #f3f7f9;
+}
+
+.header-top-panel {
+  background-color: #293449;
+}
+
+.main-header-logo,
+.main-footer-logo {
+  background-color: #ee3643;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.main-navigation {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.site-navigation,
+.footer-catalog-navigation,
+.footer-site-navigation,
+.footer-social,
+.index-about-company li {
+  list-style: none;
+}
+
+.site-navigation a,
+.footer-site-navigation a,
+.footer-social a,
+.header-top-panel a {
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #242424;
+}
+
+.header-top-panel a:hover,
+.header-top-panel a:focus {
+  background-color: #212a3a;
+}
+
+.header-top-panel a:active {
+  opacity: 0.6;
+  background-color: #161d29;
+}
+
+a.main-header-logo:hover,
+a.main-footer-logo:hover {
+  background-color: #8e1e26;
+}
+
+a.main-header-logo:focus,
+a.main-footer-logo:focus {
+  background-color: #9a212a;
+}
+
+.header-description p {
+color: #ee3643;
+font-size: 16px;
+font-style: italic;
+line-height: 23px;
+}
+
+.header-phone {
+color: #ee3643;
+font-family: "Cuprum", Arial, sans-serif;
+font-size: 21px;
+line-height: 21px;
+}
+
+.header-adress {
+color: #32425c;
+font-size: 14px;
+line-height: 24px;
+}
+
+.user-navigation a {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button {
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family:  "Cuprum", Arial, sans-serif;
+  background-color: #ee3643;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
+h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.index-about-company li {
+  font-family: Cuprum;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #32425c;
+}
+
+.footer-panel {
+  background-color: #293449;
+}
+
+.footer-panel a {
+  color: #ffd180;
+}
+
+.footer-catalog-navigation a {
+  color: #ffd180;
+}
+
+.footer-catalog-navigation a:hover,
+.footer-catalog-navigation a:focus,
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:active {
+  opacity: 0.5;
+  color: #f1f5f7;
+}
+
+.footer-catalog-navigation a:active {
+  opacity: 0.5;
+  color: #ffd180;
+}
+.footer-panel a:hover,
+.footer-panel a:focus, {
+  text-decoration: underline;
+}
+
+.footer-panel a:active {
+  text-decoration: underline;
+  color: #ee3643;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.modal {
+  display: none;
+}
