@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "PT-Sans", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -40,7 +40,8 @@ body {
   background-color: #f3f7f9;
 }
 
-.header-container {
+.header-container,
+.header-block {
   width: 940px;
   margin: 0 auto;
   padding: 0 0;
@@ -49,12 +50,7 @@ body {
 }
 
 .header-block {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 0;
-  display: flex;
   margin-bottom: 20px;
-  justify-content: space-between;
 }
 
 .header-top-panel {
