@@ -8,16 +8,83 @@ body {
   background-color: #ffffff;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-header-logo {
-  padding: 13px 55px 13px 55px;
+  padding: 14px 55px 3px 55px;
+  box-shadow: 0px 5px 0 0 #b52933;
 }
 
 .main-footer-logo {
   padding: 13px 55px 13px 55px;
 }
+.header-button {
+  display: flex;
+}
 
 .header-button a {
-  padding: 14px 20px 14px 20px;
+  padding: 10px 20px;
+  display: block;
+  vertical-align: middle;
+}
+
+.header-button .empty-basket,
+.header-button .favorites {
+  padding-left: 50px;
+  position: relative;
+}
+
+.empty-basket::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 16px;
+  height: 18px;
+  background-image: url("img/svg/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+  background-color: #ff0000;
+}
+
+.favorites::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 16px;
+  height: 18px;
+  background-image: url("img/svg/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+  background-color: #ff0000;
 }
 
 .empty-buy,
@@ -57,7 +124,7 @@ body {
   background-color: #293449;
   display: flex;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 33px;
   justify-content: space-between;
 }
 
@@ -69,20 +136,26 @@ body {
 
 .site-navigation {
   display: flex;
-  width: 940px;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 0;
   margin-bottom: 60px;
-  justify-content: space-between;
+  justify-content: space-around;
+  box-shadow: 0px 5px 0 0 #293449;
 }
 
-.site-navigation li,
 .site-navigation a {
-  padding: 10px 10px 10px 10px;
+  display: block;
+  vertical-align: middle;
+  padding: 19px 30px;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.site-navigation li:first-child a {
+  padding-left: 55px;
+}
+
+.site-navigation li:last-child a {
+  padding-right: 55px;
 }
 
 .index-about-company {
@@ -96,10 +169,6 @@ body {
 .main-header-logo,
 .main-footer-logo {
   background-color: #ee3643;
-}
-
-a {
-  text-decoration: none;
 }
 
 header {
@@ -133,7 +202,12 @@ header {
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-  background-color: #242424;
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  opacity: 0.5;
+  background-color: #1d2739;
 }
 
 .header-top-panel a:hover,
@@ -164,7 +238,7 @@ a.main-footer-logo:active {
   font-style: italic;
   line-height: 23px;
   width: 200px;
-  padding-left: 53px
+  padding-left: 53px;
 }
 
 .header-phone {
@@ -172,28 +246,65 @@ a.main-footer-logo:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
-  padding: 10px 50px 10px 50px;
+  padding: 10px 52px 10px 74px;
   outline: 3px solid #ffffff;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.header-phone::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 16px;
+  height: 18px;
+  background-image: url("img/svg/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #ff0000;
 }
 
 .header-adress {
   color: #32425c;
   font-size: 14px;
   line-height: 24px;
+  padding: 0;
+  margin: 0;
 }
 
 .user-navigation a {
   color: #000000;
   background-color: #ffffff;
+  font-family: Cuprum;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+
 }
 
 .user-navigation .login {
-  padding: 10px 50px 10px 75px;
+  padding: 11px 24px 11px 45px;
+  margin-right: 10px;
+  position: relative;
+}
+
+
+.user-navigation .login::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 16px;
+  height: 18px;
+  background-image: url("img/svg/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #ff0000;
 }
 
 .user-navigation .checkin {
-  padding: 10px 50px 10px 50px;
-  margin-left: 10px;
+  padding: 11px 24px;
 }
 
 .header-top-panel a.empty-buy,
@@ -232,6 +343,12 @@ a.main-footer-logo:active {
   justify-content: space-between;
 }
 
+.main-column p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
 .button {
   text-align: center;
   color: #ffffff;
@@ -240,6 +357,9 @@ a.main-footer-logo:active {
   font-family:  "Cuprum", Arial, sans-serif;
   background-color: #ee3643;
   border: none;
+  display: inline-block;
+  padding: 8px 40px;
+  border-radius: 5px;
 }
 
 .button:hover,
@@ -255,6 +375,9 @@ h2 {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .index-about-company li {
@@ -337,6 +460,17 @@ footer p {
 .footer-site-navigation li:last-child,
 .footer-catalog-navigation li:last-child {
   margin-right: 0;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+  border-radius: 30px;
+  margin-right: 4px;
 }
 
 .container h1 {
