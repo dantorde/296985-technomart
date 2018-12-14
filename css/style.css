@@ -693,6 +693,8 @@ footer p {
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 218px;
   margin-bottom: 20px;
