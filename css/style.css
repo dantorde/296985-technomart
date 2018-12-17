@@ -40,10 +40,25 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 5px 0 0 #b52933;
 }
 
+.main-header-logo:hover,
+.main-header-logo:focus,
+.main-footer-logo:hover,
+.main-footer-logo:focus {
+  background-color: #8e1e26;
+  box-shadow: 0px 5px 0 0 #9a212a;
+}
+
+.main-header-logo:active,
+.main-footer-logo:active {
+  background-color: #9a212a;
+  box-shadow: 0px 5px 0 0 #8e1e26;
+}
+
 .main-footer-logo {
   padding: 22px 40px 13px 40px;
   box-shadow: 0px 5px 0 0 #b52933;
 }
+
 .header-button {
   display: flex;
 }
@@ -54,14 +69,31 @@ input[type="radio"].visually-hidden {
   vertical-align: middle;
 }
 
-.header-button .empty-basket,
-.header-button .full-basket,
+.header-button .basket,
 .header-button .favorites {
   padding-left: 50px;
   position: relative;
 }
 
-.empty-basket::before {
+.header-button .basket {
+  padding-right: 30px;
+}
+
+.basket.full {
+  background-color: #ee3643;
+}
+
+.basket.full:hover,
+.basket.full:focus {
+  background-color: #ca2c37;
+}
+
+.basket.full:active {
+  background-color: #ba2732;
+}
+
+
+.basket::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -73,6 +105,8 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   opacity: 0.3;
 }
+
+
 
 .favorites::before {
   content: "";
@@ -81,25 +115,10 @@ input[type="radio"].visually-hidden {
   left: 24px;
   width: 16px;
   height: 18px;
-  background-image: url("../img/svg/icon-cart.svg");
+  background-image: url("../img/svg/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
-}
-
-.empty-buy,
-.full-buy {
-  background-color: #63a63e;
-}
-
-.full-buy:hover,
-.full-buy:focus {
-  background-color: #5fbb2d;
-}
-
-.full-buy:active {
-  background-color: #518534;
-  color: #ffffff;
 }
 
 .main-header,
@@ -172,7 +191,7 @@ input[type="radio"].visually-hidden {
 }
 
 header {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   color: #000000;
   font-weight: 400;
@@ -210,26 +229,44 @@ header {
   background-color: #1d2739;
 }
 
-.header-top-panel a:hover,
-.header-top-panel a:focus {
-  background-color: #212a3a;
-}
-
-.header-top-panel a:active {
-  opacity: 0.6;
-  background-color: #161d29;
-}
-
 .main-header-logo:hover,
 .main-header-logo:focus,
 .main-footer-logo:hover,
 .main-footer-logo:focus {
-  background-color: #8e1e26;
+  background-color: #ca2c37;
 }
 
-a.main-header-logo:active,
-a.main-footer-logo:active {
-  background-color: #9a212a;
+.main-header-logo:active,
+.main-footer-logo:active {
+  background-color: #ba2732;
+}
+
+.header-button a:hover,
+.header-button a:focus {
+  background-color: #212a3a;
+}
+
+.header-button a:hover::before {
+  opacity: 1;
+}
+
+.header-button a:active {
+  opacity: 0.5;
+  background-color: #161d29;
+}
+
+.header-button .buy {
+  background-color: #63a63e;
+}
+
+.header-button .buy:hover,
+.header-button .buy:focus {
+  background-color: #5fbb2d;
+}
+
+.header-button .buy:active {
+  background-color: #518534;
+  color: #ffffff;
 }
 
 .header-description {
@@ -243,7 +280,7 @@ a.main-footer-logo:active {
 
 .header-phone {
   color: #ee3643;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   padding: 10px 52px 10px 74px;
@@ -275,7 +312,7 @@ a.main-footer-logo:active {
 .user-navigation a {
   color: #000000;
   background-color: #ffffff;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 21px;
@@ -288,23 +325,39 @@ a.main-footer-logo:active {
   position: relative;
 }
 
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ee3643;
+}
+
+.user-navigation a:active {
+  color: #b2b2b2;
+}
+
+.user-navigation .login:hover::before {
+
+}
 
 .user-navigation .login::before {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 24px;
-  width: 16px;
-  height: 18px;
+  top: 14px;
+  left: 13px;
+  width: 20px;
+  height: 17px;
   background-image: url("../img/svg/icon-login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
+.user-navigation .checkin {
+  padding: 11px 24px;
+}
+
 .user-name {
   color: #000000;
   background-color: #ffffff;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 21px;
@@ -313,36 +366,60 @@ a.main-footer-logo:active {
   position: relative;
 }
 
-.user-navigation .checkin {
-  padding: 11px 24px;
+
+.user-name a {
+  color: #000000;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
-.header-top-panel .empty-buy,
-.header-top-panel .full-buy {
-  background-color: #63a63e;
+.user-name .name::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/svg/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.header-top-panel .full-buy:hover,
-.header-top-panel .full-buy:focus {
-  background-color: #5fbb2d;
+.user-navigation-login .logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 17px;
+  background-image: url("../img/svg/icon-logout.svg");
+  font-size: 0;
 }
 
-.header-top-panel .full-buy:active {
-  background-color: #518534;
-  color: #ffffff;
+.user-navigation-login > a {
+  color: #32425c;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: underline;
+  margin: 0 20px;
 }
 
-.header-top-panel .full-basket {
-  background-color: #ee3643;
-}
-.header-top-panel .full-basket:hover,
-.header-top-panel .full-basket:focus {
-  background-color: #8e1e26;
+.user-navigation-login > a:hover {
+  color: #ee3643;
 }
 
-.header-top-panel .full-basket:active {
-  background-color: #9a212a;
+.user-navigation-login > a:active {
+  color: #32425c;
 }
+
+.user-navigation-login > a:last-child {
+  margin-right: 0;
+}
+
 
 .main-column {
   width: 940px;
@@ -364,7 +441,7 @@ a.main-footer-logo:active {
   color: #ffffff;
   vertical-align: middle;
   text-transform: uppercase;
-  font-family:  "Cuprum", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   background-color: #ee3643;
   border: none;
   display: inline-block;
@@ -383,7 +460,7 @@ a.main-footer-logo:active {
 }
 
 h2 {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -398,7 +475,7 @@ h2 {
 }
 
 .index-about-company ul {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
@@ -469,7 +546,7 @@ footer p {
   margin: 0 auto;
   padding: 0 0;
   display: flex;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -488,7 +565,7 @@ footer p {
   padding: 0 0;
   display: flex;
   justify-content: space-between;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -531,7 +608,7 @@ footer p {
 
 .container h1 {
   color: #32425c;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -540,16 +617,53 @@ footer p {
   }
 
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
   list-style: none;
 }
 
-.breadcrumbs a,
-.breadcrumbs-current {
+.breadcrumbs li {
+  position: relative;
+  margin-right: 42px;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.breadcrumbs li:first-child a {
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  background-image: url("../img/svg/icon-home.svg");
+  font-size: 0;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs a {
+  color: #000000;
+}
+
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -25px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+}
+
+.breadcrumbs-current::after {
+  display: none;
 }
 
 .filters fieldset {
@@ -562,6 +676,7 @@ footer p {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .filters ul {
@@ -570,6 +685,80 @@ footer p {
 }
 
 
+.filter label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-left: 35px;
+  user-select: none;
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+.brands input + label::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: -42px;
+  top: 0;
+  border: 2px solid #c5c5c5;
+  border-radius: 2px;
+}
+
+
+.brands input:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  left: -42px;
+  top: 0;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: none;
+}
+
+.supply input + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  width: 17px;
+  height: 17px;
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
+}
+
+.supply input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -34px;
+  width: 8px;
+  height: 8px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+}
+
+.filter-button{
+  padding: 13px 38px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
 .catalog-list {
   list-style: none;
 }
@@ -578,7 +767,7 @@ footer p {
   margin:0 auto;
   margin-bottom: 7px;
   color: #ffffff;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -618,7 +807,7 @@ footer p {
   margin-bottom:7px;
   width: 129px;
   color: #32425c;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
