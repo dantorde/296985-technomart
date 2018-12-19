@@ -79,16 +79,20 @@ input[type="radio"].visually-hidden {
   padding-right: 30px;
 }
 
-.basket.full {
+.basket.full,
+.favorites.full {
   background-color: #ee3643;
 }
 
 .basket.full:hover,
-.basket.full:focus {
+.basket.full:focus,
+.favorites.full:hover,
+.favorites.full:focus {
   background-color: #ca2c37;
 }
 
-.basket.full:active {
+.basket.full:active,
+.favorites.full:active {
   background-color: #ba2732;
 }
 
@@ -943,6 +947,7 @@ footer p {
 
 .catalog-item:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  z-index: 2;
 
 }
 
