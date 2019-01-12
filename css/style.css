@@ -143,16 +143,16 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0 20px 0 20px;
 
 }
 
 .header-block {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0 20px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,7 +168,7 @@ input[type="radio"].visually-hidden {
 .main-navigation {
   width: 940px;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -195,11 +195,11 @@ input[type="radio"].visually-hidden {
   padding: 19px 30px;
 }
 
-.site-navigation li:first-child a {
+.site-navigation li:first-child > a {
   padding-left: 55px;
 }
 
-.site-navigation li:last-child a {
+.site-navigation li:last-child > a {
   padding-right: 55px;
 }
 
@@ -301,7 +301,7 @@ header {
       -ms-flex-positive: 1;
           flex-grow: 1;
   color: #ffffff;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
@@ -560,9 +560,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0 20px 0 20px;
   margin-bottom: 85px;
 }
 
@@ -862,8 +862,9 @@ header {
 }
 
 .continue-button {
-  display: inline-block;
-  padding: 8px 40px 7px;
+  display: block;
+  width: 220px;
+  padding: 8px 0px 7px;
   text-align: center;
   color: #000000;
   vertical-align: middle;
@@ -913,6 +914,7 @@ header {
 
 
 .service-block .warranty-block {
+  display: none;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -923,6 +925,7 @@ header {
 }
 
 .service-block .credit-block {
+  display: none;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -939,7 +942,7 @@ header {
 .service-block h3 {
   margin: 0;
   margin-bottom: 23px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   color: #32425c;
   font-size: 36px;
   font-weight: 400;
@@ -977,13 +980,19 @@ header {
   margin-bottom: -1px;
   padding: 17px 0 19px 20px;
   color: #ffffff;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   font-weight: 700;
   text-decoration: none;
   background-color: #32425c;
   border: 1px solid #4d637b;
   cursor: pointer;
+}
+
+.service-list .service-list-active {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .service-list a:active {
@@ -1065,12 +1074,6 @@ h2 {
   background-color: #f2f6f8;
 }
 
-.seo-article {
-  width: 940px;
-  margin: 0 auto;
-  padding: 60px;
-}
-
 .pagination-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,7 +1152,7 @@ h2 {
 }
 
 .footer-panel a:hover,
-.footer-panel a:focus, {
+.footer-panel a:focus {
   text-decoration: underline;
 }
 
@@ -1170,9 +1173,12 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 940px;
+  width: 960px;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
   margin: 0 auto;
-  padding: 0 0;
 }
 
 .footer-top {
@@ -1187,9 +1193,9 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
-  padding: 20px 0 20px 0;
+  padding: 20px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1198,7 +1204,7 @@ footer p {
 
 .footer-contacts {
   color: #f3f7f9;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -1808,7 +1814,7 @@ footer p {
   height:88px;
   padding:45px 0 37px 0;
   background-color:#ffffff;
-  z-index:10;
+  z-index:2;
 }
 
 .model {
@@ -2031,7 +2037,9 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 940px;
+  width: 960px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 
@@ -2057,6 +2065,7 @@ footer p {
 .modal-map {
   position: fixed;
   width: 940px;
+  height: 447px;
   top: 120px;
   left: 50%;
   margin-left: -470px;
@@ -2068,6 +2077,7 @@ footer p {
 
 .modal-show {
   display: block;
+  z-index: 5;
 }
 
 .form-write-us {
@@ -2082,14 +2092,14 @@ footer p {
 
 .form-write-us label {
   color: #000000;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
 }
 
 .form-block {
-  width: 230px;
+  width: 220px;
   margin-bottom: 20px;
 }
 
@@ -2108,7 +2118,8 @@ footer p {
 
 .form-block input {
   width: 200px;
-  padding: 10px 0 10px 10px;
+  padding: 10px 4px 10px 12px;
+  margin-top: 7px;
   font: inherit;
   font-family: "PT Sans";
   font-size: 13px;
@@ -2123,6 +2134,7 @@ footer p {
 .form-write-us textarea {
   width: 460px;
   padding: 10px;
+  margin-top: 10px;
   margin-bottom: 20px;
   font: inherit;
   background-color: transparent;
@@ -2146,6 +2158,7 @@ footer p {
 .checkout-button {
   display: block;
   width: 220px;
+  padding: 8px 0px 7px;
 }
 
 .modal-close {
@@ -2185,9 +2198,11 @@ footer p {
 
 .modal-cart p {
   position: relative;
+  margin-top: 70px;
+  margin-bottom: 68px;
   padding-left: 100px;
   color: #000000;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -2196,8 +2211,8 @@ footer p {
 .modal-cart p::before {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 80px;
+  top: -20px;
+  left: 0px;
   width: 66px;
   height: 66px;
   background-image: url("../img/checkmark.png");
