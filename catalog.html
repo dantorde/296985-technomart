@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="catalog-header">
@@ -326,7 +326,7 @@
     </main>
     <footer class="main-footer">
       <div class="footer-top">
-        <a class="main-footer-logo">
+        <a class="main-footer-logo"  href="index.html">
           <img src="img/logo-footer.png" width="138" height="21" alt="Логотип интернет-магазина «Техномарт»">
         </a>
           <ul class="footer-site-navigation">
@@ -398,25 +398,5 @@
         </div>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
-<script>
-  var link = document.querySelector(".button-buy");
-  var popup = document.querySelector(".modal-cart");
-  var close = popup.querySelector(".modal-close, .continue-button");
-  var form = popup.querySelector("form");
-  var fullname = popup.querySelector("[name=fullname]");
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      fullname.focus();
-
-  });
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-  });
-</script>
-
   </body>
 </html>

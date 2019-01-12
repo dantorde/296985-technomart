@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -233,11 +233,11 @@
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             <div class="service-block">
               <ul class="service-list">
-                <li><a class="delevery" active>Доставка</a></li>
+                <li><a class="delevery service-list-active">Доставка</a></li>
                 <li><a class="warranty">Гарантия</a></li>
                 <li><a class="credit">Кредит</a></li>
               </ul>
-              <!---<div class="delevery-block">
+              <div class="delevery-block">
               <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
@@ -247,7 +247,7 @@
              <div class="warranty-block">
               <h3>Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-              </div>-->
+              </div>
               <div class="credit-block">
               <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
@@ -376,44 +376,10 @@
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
+
     <section class="modal-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942417752!2d30.320889251543253!3d59.93879686895909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1546591573389" width="940" height="447" frameborder="0" style="border:0" allowfullscreen></iframe>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
-<script>
-  var link = document.querySelector(".button-map");
-  var popup = document.querySelector(".modal-write-us");
-  var close = popup.querySelector(".modal-close");
-  var form = popup.querySelector("form");
-  var fullname = popup.querySelector("[name=fullname]");
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      fullname.focus();
-
-  });
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-  });
-
-  var link = document.querySelector(".map");
-  var popup = document.querySelector(".modal-map");
-  var close = popup.querySelector(".modal-close");
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      fullname.focus();
-
-  });
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-  });
-</script>
-
   </body>
 </html>
