@@ -70,8 +70,7 @@ input[type="radio"].visually-hidden {
 
 .header-button a {
   display: block;
-  padding: 10px 20px;
-  vertical-align: middle;
+  padding: 9px 20px;
 }
 
 .header-button .basket,
@@ -143,25 +142,24 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
-
 }
 
 .header-block {
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .header-top-panel {
   width: 100%;
-  margin-bottom: 49px;
+  margin-bottom: 48px;
   background-color: #293449;
 }
 
@@ -191,7 +189,6 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a {
   display: block;
-  vertical-align: middle;
   padding: 19px 30px;
 }
 
@@ -216,7 +213,8 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
 }
 
-header {
+.main-header,
+.catalog-header {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   color: #000000;
@@ -511,6 +509,7 @@ header {
   top: 14px;
   right: 10px;
   display: inline-block;
+  vertical-align: top;
   width: 20px;
   height: 17px;
   font-size: 0;
@@ -560,7 +559,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
   margin-bottom: 85px;
@@ -578,10 +577,11 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
 }
 
 .banner-block .banner {
+  position: relative;
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -608,10 +608,10 @@ header {
 }
 
 .banner p {
-  padding-top:25px;
-  padding-left: 23px;
+  padding-top: 23px;
+  padding-left: 22px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #ffffff;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 24px;
@@ -624,7 +624,7 @@ header {
   width: 135px;
   margin-left: 23px;
   margin-left: 23px;
-  padding: 12px;
+  padding: 10px 0 10px 0;
   color: #ffffff;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
@@ -704,7 +704,7 @@ header {
 
 .slider-container .next {
   position: absolute;
-  right: 25px;
+  right: 21px;
   top: 114px;
   width: 22px;
   height: 40px;
@@ -717,15 +717,16 @@ header {
 
 .banner-pager {
   position: absolute;
-  top: 220px;
+  top: 210px;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -15px;
   z-index: 3;
 }
 
 .banner-pager .pager {
   width: 10px;
   height: 10px;
+  margin-right: 7px;
   padding: 0;
   cursor: pointer;
   font-size: 0;
@@ -789,9 +790,9 @@ header {
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   padding-left: 24px;
-  padding-top: 27px;
+  padding-top: 25px;
   color: #ffffff;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 36px;
@@ -806,7 +807,7 @@ header {
   margin-bottom: 38px;
   padding-left: 24px;
   color: #ffffff;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -814,16 +815,17 @@ header {
 
 
 .slider-item:nth-child(1) {
-  background-image: url("../img/main-banner.png");
+  background-image: url("../img/main-banner.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 1;
 }
 
-.slider-item-button {
-  position: absolute;
-  top: 206px;
-  left: 25px;
+.slider-item:nth-child(2) {
+  background-image: url("../img/main-banner2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 0;
 }
 
 .button {
@@ -840,6 +842,13 @@ header {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.slider-item-button {
+  position: absolute;
+  top: 206px;
+  left: 25px;
+  padding: 8px 48px 7px
 }
 
 .button-group {
@@ -867,7 +876,6 @@ header {
   padding: 8px 0px 7px;
   text-align: center;
   color: #000000;
-  vertical-align: middle;
   text-transform: uppercase;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
@@ -880,8 +888,18 @@ header {
 
 .index-contacts .map {
   display: inline-block;
+  vertical-align: top;
   margin-bottom: 32px;
   margin-top: 7px;
+}
+
+.service h2,
+.main-column h2 {
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .service p {
@@ -892,6 +910,7 @@ header {
   min-width: 940px;
   padding-top: 40px;
   margin-bottom: 55px;
+  padding-bottom: 102px;
   background-color: #f5f8fa;
 
 }
@@ -906,7 +925,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-bottom: 102px;
   background-image: url("../img/delevery-car.png");
   background-position: 152px 22px;
   background-repeat: no-repeat, repeat;
@@ -918,7 +936,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-bottom: 102px;
   background-image: url("../img/warranty.png");
   background-position: 232px 0px;
   background-repeat: no-repeat, repeat;
@@ -929,7 +946,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-bottom: 102px;
   background-image: url("../img/credit.png");
   background-position: 153px 0px;
   background-repeat: no-repeat, repeat;
@@ -1001,12 +1017,13 @@ header {
   border: 1px solid #ffffff;
 }
 
-h2 {
+.seo-block h2 {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0 0 25px 0;
 }
 
 .h2-button {
@@ -1016,7 +1033,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-right: 25px;
@@ -1069,8 +1086,8 @@ h2 {
 }
 
 .seo-block {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 67px;
+  padding-bottom: 53px;
   background-color: #f2f6f8;
 }
 
@@ -1161,7 +1178,7 @@ h2 {
   color: #ee3643;
 }
 
-footer p {
+.main-footer p {
   color: #ffffff;
 }
 
@@ -1173,7 +1190,7 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 960px;
+  width: 940px;
   padding-left: 20px;
   padding-right: 10px;
   padding-top: 0;
@@ -1193,7 +1210,7 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   padding: 20px;
   font-family: Cuprum, Arial, sans-serif;
@@ -1292,7 +1309,7 @@ footer p {
       flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -1357,7 +1374,7 @@ footer p {
 }
 
 .sorting h3 {
-  margin-right: 135px;
+  margin-right: 143px;
 }
 
 .sorting p {
@@ -1367,14 +1384,14 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 40px;
+  margin-right: 50px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
 .decrease {
-  margin-right: 15px;
+  margin-right: 18px;
   margin-left: 20px;
 }
 
@@ -1386,6 +1403,12 @@ footer p {
   line-height: 18px;
   border-bottom: 1px dotted #ee3643;
   opacity: 0.3;
+}
+
+.sorting a.active {
+  color: #ee3643;
+  border-bottom: none;
+  opacity: 1;
 }
 
 .sorting a:hover,
@@ -1404,6 +1427,10 @@ footer p {
   margin: 0px;
   padding: 0px;
   border: none;
+}
+
+.filter {
+  margin-top: 15px;
 }
 
 .filter .price,
@@ -1439,7 +1466,7 @@ footer p {
   position: relative;
   display: block;
   cursor: pointer;
-  margin-left: 35px;
+  padding-left: 35px;
   margin-bottom: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1459,7 +1486,7 @@ footer p {
   position: absolute;
   width: 19px;
   height: 19px;
-  left: -35px;
+  left: 0;
   top: 0;
   border: 2px solid #c5c5c5;
   border-radius: 3px;
@@ -1470,7 +1497,7 @@ footer p {
   position: absolute;
   width: 19px;
   height: 19px;
-  left: -35px;
+  left: 0;
   top: 0;
   border: 2px solid #e9e9e9;
   border-radius: 3px;
@@ -1486,7 +1513,7 @@ footer p {
   position: absolute;
   width: 19px;
   height: 19px;
-  left: -35px;
+  left: 0;
   top: 0;
   border: 2px solid #b5b5b5;
   border-radius: 3px;
@@ -1497,7 +1524,7 @@ footer p {
   position: absolute;
   width: 27px;
   height: 23px;
-  left: -35px;
+  left: 0;
   top: 0;
   background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
@@ -1511,7 +1538,7 @@ footer p {
   position: absolute;
   width: 27px;
   height: 23px;
-  left: -35px;
+  left: 0;
   top: 0;
   background-image: url("../img/svg/checkbox-on-hover.svg");
   background-repeat: no-repeat;
@@ -1519,10 +1546,18 @@ footer p {
   border: none;
 }
 
+
+.brands input:focus + label::before {
+  	box-shadow:
+		0 0 0 3px #fff,
+		0 0 0 6px #2f7cc0;
+}
+
+
 .supply input + label::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: 0;
   top: -1px;
   width: 17px;
   height: 17px;
@@ -1534,7 +1569,7 @@ footer p {
 .supply input + label:focus::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: 0;
   top: -1px;
   width: 17px;
   height: 17px;
@@ -1546,7 +1581,7 @@ footer p {
   content: "";
   position: absolute;
   top: 7px;
-  left: -27px;
+  left: 8px;
   width: 9px;
   height: 9px;
   background-color: #c5c5c5;
@@ -1557,7 +1592,7 @@ footer p {
   content: "";
   position: absolute;
   top: 7px;
-  left: -27px;
+  left: 8px;
   width: 9px;
   height: 9px;
   background-color: #b5b5b5;
@@ -1568,7 +1603,7 @@ footer p {
   content: "";
   position: absolute;
   top: 7px;
-  left: -27px;
+  left: 8px;
   width: 9px;
   height: 9px;
   background-color: #b5b5b5;
@@ -1620,6 +1655,15 @@ footer p {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 10px solid #c5c5c5;
+}
+
+.sorting .increase.active {
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #ee3643;
 }
 
 .sorting .decrease {
@@ -1703,13 +1747,10 @@ footer p {
   left: 140px;
 }
 
-.price-controls {
-  font-size: 0;
-}
-
 .price-controls label {
   display: inline-block;
-  width: 50%;
+  vertical-align: top;
+  width: 46%;
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -1730,6 +1771,7 @@ footer p {
 }
 
 .catalog-item .button-buy {
+  position: relative;
   margin:0 auto;
   margin-bottom: 7px;
   padding: 10px 0;
@@ -1749,14 +1791,20 @@ footer p {
 .catalog-item .button-buy::before {
   content: "";
   position: absolute;
-  top: 55px;
-  left: 53px;
+  top: 11px;
+  left: 12px;
   width: 16px;
   height: 18px;
   background-image: url("../img/svg/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+
+.catalog-item .button-buy:hover::before,
+.catalog-item .button-buy:focus::before,
+.catalog-item .button-buy:active::before {
+  opacity: 1;
 }
 
 .catalog-item .button-buy:hover,
@@ -1845,9 +1893,13 @@ footer p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: -20px;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   padding: 0;
   list-style: none;
+}
+
+.index-catalog {
+  margin-bottom: 0px;
 }
 
 .brands-list {
@@ -1858,7 +1910,7 @@ footer p {
       flex-wrap: wrap;
   padding: 0;
   margin-left: -20px;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   list-style: none;
 }
 
@@ -1941,9 +1993,26 @@ footer p {
   text-align: center;
 }
 
-.catalog-item img{
+.catalog-item img {
   margin: 0 auto;
   padding-top: 19px;
+}
+
+.new-item {
+  position: relative;
+}
+
+.new-item::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 3
 }
 
 .catalog-item a {
@@ -2037,7 +2106,7 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 960px;
+  width: 940px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
