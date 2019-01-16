@@ -192,11 +192,11 @@ input[type="radio"].visually-hidden {
   padding: 19px 30px;
 }
 
-.site-navigation li:first-child > a {
+.site-navigation .first-menu-item {
   padding-left: 55px;
 }
 
-.site-navigation li:last-child > a {
+.site-navigation .last-menu-item {
   padding-right: 55px;
 }
 
