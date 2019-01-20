@@ -323,7 +323,6 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-
 .search-form .button-search {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -747,7 +746,6 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
   border-radius: 50%;
   border: 2px solid #ffffff;
-
 }
 
 .slider {
@@ -814,7 +812,6 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 24px;
 }
-
 
 .slider-item:nth-child(1) {
   background-image: url("../img/main-banner.jpg");
@@ -931,7 +928,6 @@ input[type="radio"].visually-hidden {
   background-position: 152px 22px;
   background-repeat: no-repeat, repeat;
 }
-
 
 .service-block .warranty-block {
   display: none;
@@ -1378,7 +1374,7 @@ input[type="radio"].visually-hidden {
   padding-left: 18px;
   margin: 0;
   color: #000000;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -1413,7 +1409,7 @@ input[type="radio"].visually-hidden {
 
 .sorting a {
   color: #000000;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -1495,7 +1491,6 @@ input[type="radio"].visually-hidden {
   line-height: 20px;
   text-transform: uppercase;
 }
-
 
 .brands input + label::before {
   content: "";
@@ -2246,7 +2241,6 @@ input[type="radio"].visually-hidden {
   border: 2px solid #dee3e4;
   border-radius: 3px;
 }
-
 
 .form-write-us textarea {
   width: 460px;
